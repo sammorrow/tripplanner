@@ -1,28 +1,32 @@
 {
-  "name": "tripplanner",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bluebird": "^3.5.0",
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "morgan": "^1.8.1",
-    "node-sass": "^4.5.2",
-    "nodemon": "^1.11.0",
-    "nunjucks": "^3.0.0",
-    "volleyball": "^1.4.1"
-  },
-  "devDependencies": {
-    "pg": "^6.1.5",
-    "pg-hstore": "^2.3.2",
-    "sequelize": "^3.30.4"
-  }
+    "name": "tripplanner",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start:dev": "nodemon -e html,css,js app.js",
+        "build:css": "node-sass -w -r assets/stylesheets -o public/stylesheets",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "npm run start:dev"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bluebird": "^3.5.0",
+        "body-parser": "^1.17.1",
+        "bootstrap": "^3.3.7",
+        "express": "^4.15.2",
+        "jquery": "^3.2.1",
+        "morgan": "^1.8.1",
+        "nunjucks": "^3.0.0",
+        "volleyball": "^1.4.1"
+    },
+    "devDependencies": {
+        "node-sass": "^4.5.2",
+        "nodemon": "^1.11.0",
+        "pg": "^6.1.5",
+        "pg-hstore": "^2.3.2",
+        "sequelize": "^3.30.4"
+    }
 }

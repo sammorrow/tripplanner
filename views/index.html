@@ -1,5 +1,13 @@
-{% extends "home.html" %} {% block content %}
+<!--{% extends "home.html" %} {% block content %}
 <h1>Trip Planner</h1>
 
-<p>{{activities}}</p>
-{%endblock%}
+{% for activity in activities %}
+<p> {{activity.name}} </p>
+{% endfor %}
+<br> {% for hotel in hotels %}
+<p> {{hotel.name}} </p>
+{% endfor %}
+<br> {% for restaurant in restaurants %}
+<p> {{restaurant.name}} </p>
+{% endfor %}
+<br> {%endblock%}-->

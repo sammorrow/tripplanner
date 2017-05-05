@@ -12,7 +12,7 @@ router.get("/", function(req, res, next) {
     Promise.all([pullingActivities, pullingHotels, pullingRestaurants])
         .spread(function(activities, hotels, restaurants) {
             console.log(activities)
-            res.render("index", {
+            res.render("sidebar", {
                 activities,
                 hotels,
                 restaurants

@@ -1,0 +1,70 @@
+p {
+    color: purple;
+}
+
+#map {
+    float: left;
+    height: 105vh
+}
+
+.body-container {
+    background-color: grey
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+}
+
+.purpblock {
+    height: 100%;
+    background-color: #e1e1e1
+}
+
+.orangeblock {
+    background-color: orange;
+    height: 100%;
+}
+
+.sidebar-middle {
+    height: 10vh;
+    padding-top: 7px
+}
+
+#day {
+    margin: 0;
+    padding: 0
+}
+
+.sidebar {
+    padding-top: 0;
+    height: 40vh;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.daycount {
+    padding: 10px 0px;
+    background-color: green;
+}
+
+h2 {
+    padding: 20px 0 0 0;
+    margin: 0
+}
+
+.sidebar-label {
+    float: left;
+    clear: left;
+}
+
+.sidebar-select {
+    margin-right: 20%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+
+.orangeblock li {
+    display: inline;
+    margin-right: 20%;
+}

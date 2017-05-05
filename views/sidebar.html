@@ -1,0 +1,53 @@
+{% extends "home.html" %} {% block content %}
+<div class="dropdown" id="myDropdown">
+    <br>
+
+    <label for="activity" class="sidebar-label">Activities</label>
+
+    <select id="activity" class="sidebar-select">
+       {% for activity in activities %}
+        <option> {{activity.name}}</option>
+        {% endfor %}
+    </select>
+    <button class="btn-primary"> X
+                  </button>
+
+    <label for="restaurant" class="sidebar-label">Restaurants</label>
+
+    <select id="restaurant" class="sidebar-select">
+       {% for restaurant in restaurants %}
+        <option> {{restaurant.name}}</option>
+        {% endfor %}
+    </select>
+    <button class="btn-primary"> X
+                  </button>
+    <label for="hotel" class="sidebar-label">Hotels</label>
+    <select id="hotel" class="sidebar-select">
+       {% for hotel in hotels %}
+        <option> {{hotel.name}}</option>
+        {% endfor %}
+    </select>
+    <button class="btn-primary"> X
+                  </button>
+</div>
+
+
+<!--<br> {% for hotel in hotels %}
+<p> {{hotel.name}} </p>
+{% endfor %}
+<br> {% for restaurant in restaurants %}
+<p> {{restaurant.name}} </p>
+{% endfor %}
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+    </ul>
+</div>-->
+
+<script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+</script>
+
+{% endblock %}

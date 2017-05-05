@@ -57,7 +57,7 @@ const Restaurant = db.define('restaurant', {
         type: Sequelize.STRING
     },
     price: {
-        type: Sequelize.RANGE(Sequelize.DECIMAL),
+        type: Sequelize.DECIMAL,
         allowNull: 'false',
         validate: { min: 1, max: 5 }
     }

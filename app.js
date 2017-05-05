@@ -12,6 +12,7 @@ var routes = require('./routes');
 app.use(volleyball);
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
 app.use(express.static("public"))
 
 
@@ -20,7 +21,10 @@ app.engine('html', nunjucks.render);
 app.set('view engine', 'html');
 nunjucks.configure('views', { noCache: true });
 
+app.use('/bootstrap/', express.static('node_modules/bootstrap/dist/'));
+app.use('/jquery/', express.static('node_modules/jquery/dist/'));
 app.use('/', routes)
+
 
 models.db.sync()
     .then(function() {
