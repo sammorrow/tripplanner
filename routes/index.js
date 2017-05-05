@@ -1,16 +1,29 @@
 var express = require('express');
+var Promise = require('bluebird');
+var database = require("../models")
+
 var router = express.Router();
 
-router.get("/", function(req, res, next){
-  res.render("home")
-  // if (err){
-  //   res.render("error")
-  // }
+router.get("/", function(req, res, next) {
+    var pullingActivities = database.Activity.findAll()
+    var pullingHotels = database.Hotel.findAll();
+    var pullingRestaurants = database.Restaurant.findAll()
+
+    Promise.all([pullingActivities, pullingHotels, pullingRestaurants])
+        .spread(function(activities, hotels, restaurants) {
+            console.log(activities)
+            res.render("index", {
+                activities,
+                hotels,
+                restaurants
+            })
+        })
+
 });
 
 
-router.use("/", function(req, res){
-  res.render("error")
+router.use("/", function(req, res) {
+    res.render("error")
 })
 
 module.exports = router

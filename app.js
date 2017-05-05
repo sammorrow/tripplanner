@@ -10,7 +10,7 @@ var models = require('./models');
 var routes = require('./routes');
 
 app.use(volleyball);
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(express.static("public"))
 
@@ -22,9 +22,9 @@ nunjucks.configure('views', { noCache: true });
 
 app.use('/', routes)
 
-models.db.sync({force: true})
-    .then(function(){
+models.db.sync()
+    .then(function() {
         app.listen(1337, function() {
-        console.log('listening on port 1337');
-    });
+            console.log('listening on port 1337');
+        });
     })
