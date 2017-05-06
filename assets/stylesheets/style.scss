@@ -1,14 +1,22 @@
-p {
-    color: purple;
+hr {
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+#day {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 #map {
     float: left;
-    height: 105vh
+    height: 102vh
 }
 
 .body-container {
-    background-color: grey
+    background-color: #EFEFEF;
 }
 
 .container {
@@ -16,19 +24,29 @@ p {
     margin: 0;
 }
 
+.navbar-brand {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #500000
+}
+
+.navbar-container {
+    background-color: maroon;
+}
+
 .purpblock {
-    height: 100%;
-    background-color: #e1e1e1
+    margin-top: 5%;
+    background-color: #aaaaaa;
+    border-radius: 5px;
 }
 
-.orangeblock {
-    background-color: orange;
-    height: 100%;
-}
-
-.sidebar-middle {
-    height: 10vh;
-    padding-top: 7px
+.dropdown .row {
+    margin: 0
 }
 
 #day {
@@ -36,35 +54,69 @@ p {
     padding: 0
 }
 
+.daycount {
+    background-color: maroon;
+}
+
+.daycount .btn-primary {
+    background-color: #f5f5d9;
+    color: black;
+    margin: 6% 1% 6% 1%;
+}
+
 .sidebar {
-    padding-top: 0;
-    height: 40vh;
+    padding: 0;
+    height: 35vh;
     float: left;
     margin-bottom: 20px;
 }
 
-.daycount {
-    padding: 10px 0px;
-    background-color: green;
-}
-
-h2 {
-    padding: 20px 0 0 0;
-    margin: 0
+.sidebar-middle {
+    height: 8vh;
+    padding-top: 7px;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
 }
 
 .sidebar-label {
-    float: left;
+    margin-left: 2%;
+    display: block;
     clear: left;
+    font-size: 15px;
 }
 
 .sidebar-select {
-    margin-right: 20%;
+    margin: 2%;
+    margin-right: 15%;
     margin-bottom: 5%;
     width: 70%;
+    height: 30%
+}
+
+.sidebar-middle .row {
+    margin: 0
+}
+
+.orangeblock {
+    background-color: #aaaaaa;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.orangeblock h2 {
+    padding: 5px 0 0 0;
+    margin: 0 0 0 15px;
+    font-size: 20px;
 }
 
 .orangeblock li {
-    display: inline;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 2%;
     margin-right: 20%;
+}
+
+.orangeblock .row {
+    margin: 0
 }
